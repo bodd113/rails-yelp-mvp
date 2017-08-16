@@ -1,7 +1,15 @@
-<%= form_for [@restaurant] do |r| %>
+<%= simple_form_for [@restaurant] do |r| %>
+<label for="name">Name:</label>
 <%= r.text_field :name %>
+<br />
+<label for="address">Address:</label>
 <%= r.text_field :address %>
+<br />
+<label for="phone_number">Phone Number:</label>
 <%= r.text_field :phone_number %>
+<br />
+<label for="category">Category:</label>
 <%= r.text_field :category %>
+<br /><br />
 <%= r.submit %>
 <% end %>

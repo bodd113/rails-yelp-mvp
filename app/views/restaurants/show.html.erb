@@ -9,14 +9,18 @@
   <% end %>
 </ul>
 
-<%= form_for [@restaurant, @review] do |r| %>
+<%= simple_form_for [@restaurant, @review] do |r| %>
 <label for="content">Content:</label>
+<br />
 <%= r.text_area :content %>
+<br />
 <label for="rating">Rating:</label>
+<br />
 <%= r.number_field :rating %>
+<br />
 <%= r.submit %>
 <% end %>
+<br /><br />
 
-
-<p> <%= link_to "Restaurants", restaurants_path %> </p>
+<p> <%= link_to "Restaurants", restaurants_path, class: "btn btn-primary"%> </p>
 
